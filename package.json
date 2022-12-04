@@ -1,6 +1,6 @@
 {
   "name": "filepix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "powerful image convertor package this package you can convert the file into a different format",
   "main": "index.js",
   "scripts": {
