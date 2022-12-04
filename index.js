@@ -3,7 +3,6 @@ const rimraf = require('rimraf');
 const sizes = require('./files/sizes.json');
 const pdf2img = require('./modules/pdf2img');
 const convertPDF = require('./modules/img2pdf');
-const gifConvertor = require('./modules/gif2img');
 const watermark = require('./modules/watermark');
 const effect = require('./modules/effect');
 const ocr = require('./modules/ocr');
@@ -159,19 +158,6 @@ exports.img2PDF = async (pages = [], output, options = { size: sizes.A4 }) => {
         }
     }
 
-}
-
-exports.gif2img = async (input, output, options) => {
-    gifConvertor.fromBuffer({
-        buffer: fs.readFileSync(input, { encoding: 'base64' }),
-        quality: options.quality || 50,
-        output_format: options.extension || "jpg",
-        size: options.size || "original"
-    }, (err, response, file) => {
-        if (response) {
-            fs.writeFileSync(output + input.split('/').slice(-1).pop().split('.')[0] + '.jpg', response)
-        }
-    });
 }
 
 exports.base64ToImg = async (input, output, options) => {

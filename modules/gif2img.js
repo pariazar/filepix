@@ -1,11 +1,11 @@
-const image = require('images');
-const request = require('request').defaults({
-    encoding: null
-});
-const FileAPI = require('file-api'),
-    File = FileAPI.File,
-    FileList = FileAPI.FileList,
-    FileReader = FileAPI.FileReader;
+// const image = require('images');
+// const request = require('request').defaults({
+//     encoding: null
+// });
+// const FileAPI = require('file-api'),
+//     File = FileAPI.File,
+//     FileList = FileAPI.FileList,
+//     FileReader = FileAPI.FileReader;
 
 function GetFilename(url) {
     if (url) {
