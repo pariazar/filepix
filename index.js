@@ -1,7 +1,5 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
-const jimp = require('jimp');
-const { page, options, output } = require('pdfkit');
 const sizes = require('./files/sizes.json');
 const pdf2img = require('./modules/pdf2img');
 const convertPDF = require('./modules/img2pdf');
