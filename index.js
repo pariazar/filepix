@@ -8,7 +8,6 @@ const watermark = require('./modules/watermark');
 const effect = require('./modules/effect');
 const ocr = require('./modules/ocr');
 const wordMaker = require('./modules/wordMaker');
-const createCollage = require('./modules/collage');
 const pngToJpeg = require('./modules/convertImg');
 const base64ToImage = require('./modules/base642img');
 
@@ -173,28 +172,6 @@ exports.gif2img = async (input, output, options) => {
             fs.writeFileSync(output + input.split('/').slice(-1).pop().split('.')[0] + '.jpg', response)
         }
     });
-}
-
-exports.img2Collage = async (pages, output) => {
-    let options;
-    if (typeof pages === 'string') {
-        pages = getFiles(pages).map((page) => String(page));
-        options = {
-            sources: pages,
-            width: 3, // number of images per row
-            height: 2, // number of images per column
-            imageWidth: 350, // width of each image
-            imageHeight: 250, // height of each image
-            backgroundColor: "#cccccc", // optional, defaults to black.
-            spacing: 2, // optional: pixels between each image
-        };
-    }
-    createCollage(options)
-        .then((canvas) => {
-            const src = canvas.jpegStream();
-            const dest = fs.createWriteStream(output);
-            src.pipe(dest);
-        });
 }
 
 exports.base64ToImg = async (input, output, options) => {

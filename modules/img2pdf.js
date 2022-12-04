@@ -17,4 +17,4 @@ module.exports = (pages, size) => {
   return doc
 };
 
-module.exports.sizes = require("./sizes.json")
+module.exports.sizes = require("../files/sizes.json")
