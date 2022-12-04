@@ -16,6 +16,7 @@
             </p>
 
 <hr>
+
 ## Installation
 Install via NPM:
 
@@ -316,6 +317,7 @@ options = {
 <h2>Convert pdf to images</h2>
 this feature let you convert your pdf into multiple images.
 <h3>Basic Usage</h3>
+
 ```javascript
 filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 ```
@@ -334,6 +336,7 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 <hr>
 <h2>Convert png to jpg</h2>
 convert png format into jpg even you can compress your image.
+
 ```javascript
 await filePix.png2jpeg('./input.png', './output.jpg'
 , options = {
@@ -343,10 +346,12 @@ await filePix.png2jpeg('./input.png', './output.jpg'
 <hr>
 <h2>base64 to jpg or png</h2>
 convert base64 to png or jpg by calling below method.
+
 ```javascript
 await filePix.base64ToImg('base64Str', './outputImageDir/output.png', { extension: 'png' });
 ```
 <hr>
+
 ## Support
   - [Bug Reports](https://github.com/hamedpa/filepix/issues/)
 
