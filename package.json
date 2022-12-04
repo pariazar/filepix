@@ -1,0 +1,75 @@
+{
+  "name": "filepix",
+  "version": "1.0.0",
+  "description": "powerful image convertor package this package you can convert the file into a different format",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "hamedPa",
+  "engines": {
+    "node": ">4.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hamedpa/filepix",
+  "contributors": [
+    {
+      "name": "HamedPa",
+      "email": "hamedpa21@gmail.com",
+      "url": "https://github.com/hamedpa"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/hamedpa/filepix/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamedpa/filepix"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "@jimp/plugins": "^0.16.2",
+    "bluebird": "^3.7.2",
+    "canvas": "^2.10.2",
+    "compress-image": "^0.0.1",
+    "docx": "^7.7.0",
+    "file-api": "^0.10.4",
+    "html-to-image": "^1.10.8",
+    "image-watermark": "^0.0.7",
+    "imagemagick": "^0.1.3",
+    "images": "^3.2.4",
+    "is-url": "^1.2.4",
+    "jimp": "^0.16.2",
+    "jimp-watermark": "^1.1.0",
+    "jpeg-js": "^0.4.4",
+    "node-fetch": "^2.6.7",
+    "node-ratify": "^1.1.32",
+    "node-tesseract-ocr": "^2.2.1",
+    "pdfjs-dist": "^2.14.305",
+    "pdfkit": "^0.13.0",
+    "png-js": "^1.0.0",
+    "request": "^2.88.2",
+    "watermarkjs": "^2.1.1"
+  },
+  "keywords": [
+    "pdf",
+    "pdf convertor",
+    "pdf maker",
+    "img",
+    "image",
+    "png",
+    "convert",
+    "docx",
+    "extractText",
+    "jpeg",
+    "jpg",
+    "gif",
+    "image to gif",
+    "add effect",
+    "watermark",
+    "compress image"
+  ]
+}
