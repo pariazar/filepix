@@ -336,9 +336,11 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 ```
 
 #### Custom Language
-1- find your LangCode from <a href="https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html" target="_blank">here</a>
-2- download proper .traineddata file from <a href="https://github.com/tesseract-ocr/tessdata" target="_blank">here</a> and copy it on your local machine in Tesseract-OCR/tessdata  directory
-3- finally use below code:
+
+1- find your LangCode from <a href="https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html" target="_blank">here</a></br>
+2- download proper .traineddata file from <a href="https://github.com/tesseract-ocr/tessdata" target="_blank">here</a> and copy it on your local machine in Tesseract-OCR/tessdata  directory</br>
+3- finally use below code:</br>
+
 ```javascript
 await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
 ```
