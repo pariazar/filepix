@@ -63,6 +63,7 @@ filePix.img2PDF(
 <p class="lead mb-5">add easily a lot of effect to your images while converting to pdf
 </p>
 add effect to your final pdf by set some options.
+
 #### Color
 Apply multiple color modification rules
 
