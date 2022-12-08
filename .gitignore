@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+man-test.js
+outputImageDir/
+node_modules/

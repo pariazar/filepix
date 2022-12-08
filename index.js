@@ -65,7 +65,7 @@ exports.makePages = async (input, output, options) => {
                 }
             });
 
-            const page = await ocr.extractText(filePath);
+            const page = await ocr.extractText(filePath, options);
             allPages.push(page);
             if (pdfArray.length - 1 === i) {
                 wordMaker.convertTextToDocs(allPages.join('\n'), output, options)
@@ -77,7 +77,7 @@ exports.makePages = async (input, output, options) => {
     });
     return allPages;
 }
-exports.pdf2docx = async (input, output, options) => {
+exports.pdf2docx = async (input, output, options = {}) => {
     const pages = await this.makePages(input, output, options);
 }
 // This returns a promise as it's an async function

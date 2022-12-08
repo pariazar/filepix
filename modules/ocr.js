@@ -6,6 +6,8 @@ exports.extractText = async (input, options = {
     oem: 1,
     psm: 3,
 }) => {
+    options.oem = 1;
+    options.psm = 3;
     return await tesseract
         .recognize(input, options)
         .then((text) => {

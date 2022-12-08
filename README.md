@@ -334,6 +334,14 @@ after installing Tesseract you can easily convert your pdf into file as docx for
 ```javascript
 await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx');
 ```
+
+#### Custom Language
+1- find your LangCode from <a href="https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html" target="_blank">here</a>
+2- download proper .traineddata file from <a href="https://github.com/tesseract-ocr/tessdata" target="_blank">here</a> and copy it on your local machine in Tesseract-OCR/tessdata  directory
+3- finally use below code:
+```javascript
+await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
+```
 <hr>
 <h2>Convert png to jpg</h2>
 convert png format into jpg even you can compress your image.
