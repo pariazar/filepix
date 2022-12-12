@@ -1,14 +1,14 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
 const sizes = require('./files/sizes.json');
-const pdf2img = require('./modules/pdf2img');
-const convertPDF = require('./modules/img2pdf');
-const watermark = require('./modules/watermark');
-const effect = require('./modules/effect');
-const ocr = require('./modules/ocr');
-const wordMaker = require('./modules/wordMaker');
-const pngToJpeg = require('./modules/convertImg');
-const base64ToImage = require('./modules/base642img');
+const pdf2img = require('./lib/pdf2img');
+const convertPDF = require('./lib/img2pdf');
+const watermark = require('./lib/watermark');
+const effect = require('./lib/effect');
+const ocr = require('./lib/ocr');
+const wordMaker = require('./lib/wordMaker');
+const pngToJpeg = require('./lib/convertImg');
+const base64ToImage = require('./lib/base642img');
 
 
 
@@ -81,31 +81,22 @@ exports.pdf2docx = async (input, output, options = {}) => {
     const pages = await this.makePages(input, output, options);
 }
 // This returns a promise as it's an async function
-exports.PDF2img = async (input, output, options) => {
-    var output = pdf2img.convert(input, options);
-    // Acting on this promise when it's fulfilled:
+exports.PDF2img = async (input, output, options = {}) => {
     const pages = [];
-    output.then(async function (pdfArray) {
-        console.log("Saving");
-        // Loop through each page, saving the images
-        for (i = 0; i < pdfArray.length; i++) {
+    var convertedImages = await pdf2img.convert(input, options);
+    if (convertedImages) {
+        for (i = 0; i < convertedImages.length; i++) {
             const filePath = output + i + "." + (options.extension ? options.extension : 'png');
-            console.log(filePath);
-            fs.writeFile(filePath, pdfArray[i], (error) => {
+            fs.writeFile(filePath, convertedImages[i], (error) => {
                 if (error) { console.error("Error: " + error); }
 
-            }); //writeFile
-            // if (options.compress) {
-
-            // }
+            });
             pages.push(filePath);
 
         }
-        console.log(pages);
         await watermark.addWatermarks(pages, options);
         await effect.addEffects(pages, options);
-
-    });
+    }
 
 }
 

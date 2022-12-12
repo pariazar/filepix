@@ -49,7 +49,7 @@ filepix.img2PDF(pages = './inputImagesDir', output = "./outputImageDir/output.pd
 or maybe your images file in different path for this case you can use below code:
 
 ```javascript
-filePix.img2PDF(
+filepix.img2PDF(
   pages = [
         './1.jpg',
         './public/upload/2.jpg',
@@ -58,7 +58,7 @@ filePix.img2PDF(
   output = "./outputImageDir/output.pdf");
 ```
 
-### Add effects
+### Add ffects
 
 <p class="lead mb-5">add easily a lot of effect to your images while converting to pdf
 </p>
@@ -321,7 +321,7 @@ this feature let you convert your pdf into multiple images.
 <h3>Basic Usage</h3>
 
 ```javascript
-filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
+filepix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 ```
 <hr>
 
@@ -333,7 +333,7 @@ filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 
 after installing Tesseract you can easily convert your pdf into file as docx format by calling below code:
 ```javascript
-await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx');
+await filepix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx');
 ```
 
 #### Custom Language
@@ -343,7 +343,7 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 3- finally use below code:</br>
 
 ```javascript
-await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
+await filepix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
 ```
 <hr>
 
@@ -352,7 +352,7 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 convert png format into jpg even you can compress your image.
 
 ```javascript
-await filePix.png2jpeg('./input.png', './output.jpg'
+await filepix.png2jpeg('./input.png', './output.jpg'
 , options = {
   quality: 50
 });
@@ -364,7 +364,7 @@ await filePix.png2jpeg('./input.png', './output.jpg'
 convert base64 to png or jpg by calling below method.
 
 ```javascript
-await filePix.base64ToImg('base64Str', './outputImageDir/output.png', { extension: 'png' });
+await filepix.base64ToImg('base64Str', './outputImageDir/output.png', { extension: 'png' });
 ```
 <hr>
 
