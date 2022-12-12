@@ -1,6 +1,6 @@
 {
   "name": "filepix",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "powerful image convertor package this package you can convert the file into a different format",
   "main": "index.js",
   "scripts": {
@@ -28,10 +28,12 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "mocha": "^10.0.0"
+    "mocha": "^10.0.0",
+    "request": "^2.88.2"
   },
   "dependencies": {
     "@jimp/plugins": "^0.16.2",
+    "canvas": "^2.10.2",
     "compress-image": "^0.0.1",
     "docx": "^7.7.0",
     "image-watermark": "^0.0.7",
@@ -45,8 +47,7 @@
     "pdfjs-dist": "^2.14.305",
     "pdfkit": "^0.13.0",
     "png-js": "^1.0.0",
-    "rimraf": "^3.0.2",
-    "canvas": "^2.10.2"
+    "rimraf": "^3.0.2"
   },
   "keywords": [
     "pdf",

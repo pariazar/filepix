@@ -3,17 +3,15 @@
 
 <center> <img src="./img/cover.png" /></center>
 
+<p class="lead">powerful image converter package, it can convert images into a different formats, it includes below features:</p>
 
-<p class="lead">powerful image converter package, it can convert images into a different
-              formats, it includes below features:</br>
-              convert pdf to word document</br>
-              convert images to a single pdf file</br>
-              convert pdf to multiple image file</br>
-              convert png to jpg</br>
-              convert base64 to jpg or png</br>
-              compress image files </br>
-              add watermarks or extra effects to your image files</br>
-            </p>
+* [convert pdf to word document](#convert-pdf-to-word-document)
+* [convert images into a single pdf file](#convert-images-to-pdf)
+* [convert pdf to multiple image file](#convert-pdf-to-images)
+* [convert png to jpg](#convert-png-to-jpg)
+* [convert base64 to jpg or png](#base64-to-jpg-or-png)
+* [compress image files](#convert-png-to-jpg)
+* [add watermarks or extra effects to your image files](#add-effects)
 
 <hr>
 
@@ -33,7 +31,8 @@ import * as filepix from "filepix";
 ```
 <hr>
 
-<h2>Convert images to PDF</h2>
+## Convert images to PDF
+
 this feature let you convert your images into a single pdf file
 <h3>Basic Usage</h3>
 <p class="lead mb-5">if you want to convert all images inside a specific directory you can use below code:
@@ -50,7 +49,7 @@ filepix.img2PDF(pages = './inputImagesDir', output = "./outputImageDir/output.pd
 or maybe your images file in different path for this case you can use below code:
 
 ```javascript
-filePix.img2PDF(
+filepix.img2PDF(
   pages = [
         './1.jpg',
         './public/upload/2.jpg',
@@ -59,7 +58,8 @@ filePix.img2PDF(
   output = "./outputImageDir/output.pdf");
 ```
 
- <h3>Add Effects</h3>
+### Add ffects
+
 <p class="lead mb-5">add easily a lot of effect to your images while converting to pdf
 </p>
 add effect to your final pdf by set some options.
@@ -315,16 +315,17 @@ options = {
 ```
 <hr>
 
-<h2>Convert pdf to images</h2>
+## Convert pdf to images
+
 this feature let you convert your pdf into multiple images.
 <h3>Basic Usage</h3>
 
 ```javascript
-filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
+filepix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 ```
 <hr>
 
-<h2>Convert pdf to word document</h2>
+## Convert pdf to word document
 
 
 
@@ -332,7 +333,7 @@ filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 
 after installing Tesseract you can easily convert your pdf into file as docx format by calling below code:
 ```javascript
-await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx');
+await filepix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx');
 ```
 
 #### Custom Language
@@ -342,24 +343,28 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 3- finally use below code:</br>
 
 ```javascript
-await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
+await filepix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
 ```
 <hr>
-<h2>Convert png to jpg</h2>
+
+## Convert png to jpg
+
 convert png format into jpg even you can compress your image.
 
 ```javascript
-await filePix.png2jpeg('./input.png', './output.jpg'
+await filepix.png2jpeg('./input.png', './output.jpg'
 , options = {
   quality: 50
 });
 ```
 <hr>
-<h2>base64 to jpg or png</h2>
+
+## base64 to jpg or png
+
 convert base64 to png or jpg by calling below method.
 
 ```javascript
-await filePix.base64ToImg('base64Str', './outputImageDir/output.png', { extension: 'png' });
+await filepix.base64ToImg('base64Str', './outputImageDir/output.png', { extension: 'png' });
 ```
 <hr>
 
