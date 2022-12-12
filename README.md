@@ -58,7 +58,7 @@ filepix.img2PDF(
   output = "./outputImageDir/output.pdf");
 ```
 
-### Add ffects
+### Add effects
 
 <p class="lead mb-5">add easily a lot of effect to your images while converting to pdf
 </p>
