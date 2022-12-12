@@ -3,17 +3,15 @@
 
 <center> <img src="./img/cover.png" /></center>
 
+<p class="lead">powerful image converter package, it can convert images into a different formats, it includes below features:</p>
 
-<p class="lead">powerful image converter package, it can convert images into a different
-              formats, it includes below features:</br>
-              convert pdf to word document</br>
-              convert images to a single pdf file</br>
-              convert pdf to multiple image file</br>
-              convert png to jpg</br>
-              convert base64 to jpg or png</br>
-              compress image files </br>
-              add watermarks or extra effects to your image files</br>
-            </p>
+* [convert pdf to word document](#convert-pdf-to-word-document)
+* [convert images into a single pdf file](#convert-images-to-pdf)
+* [convert pdf to multiple image file](#convert-pdf-to-images)
+* [convert png to jpg](#convert-png-to-jpg)
+* [convert base64 to jpg or png](#base64-to-jpg-or-png)
+* [compress image files](#convert-png-to-jpg)
+* [add watermarks or extra effects to your image files](#add-effects)
 
 <hr>
 
@@ -33,7 +31,8 @@ import * as filepix from "filepix";
 ```
 <hr>
 
-<h2>Convert images to PDF</h2>
+## Convert images to PDF
+
 this feature let you convert your images into a single pdf file
 <h3>Basic Usage</h3>
 <p class="lead mb-5">if you want to convert all images inside a specific directory you can use below code:
@@ -59,7 +58,8 @@ filePix.img2PDF(
   output = "./outputImageDir/output.pdf");
 ```
 
- <h3>Add Effects</h3>
+### Add effects
+
 <p class="lead mb-5">add easily a lot of effect to your images while converting to pdf
 </p>
 add effect to your final pdf by set some options.
@@ -315,7 +315,8 @@ options = {
 ```
 <hr>
 
-<h2>Convert pdf to images</h2>
+## Convert pdf to images
+
 this feature let you convert your pdf into multiple images.
 <h3>Basic Usage</h3>
 
@@ -324,7 +325,7 @@ filePix.PDF2img('./inputImagesDir/input.pdf', "./outputImageDir");
 ```
 <hr>
 
-<h2>Convert pdf to word document</h2>
+## Convert pdf to word document
 
 
 
@@ -345,7 +346,9 @@ await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.doc
 await filePix.pdf2docx('./inputImageDir/input.pdf', './outputImageDir/output.docx',  options = { lang: "deu" });
 ```
 <hr>
-<h2>Convert png to jpg</h2>
+
+## Convert png to jpg
+
 convert png format into jpg even you can compress your image.
 
 ```javascript
@@ -355,7 +358,9 @@ await filePix.png2jpeg('./input.png', './output.jpg'
 });
 ```
 <hr>
-<h2>base64 to jpg or png</h2>
+
+## base64 to jpg or png
+
 convert base64 to png or jpg by calling below method.
 
 ```javascript
