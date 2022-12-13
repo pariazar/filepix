@@ -1,6 +1,6 @@
 # FilePix
 [![npm](https://img.shields.io/npm/v/filepix.svg?style=flat-square)](https://www.npmjs.com/package/filepix)
-
+![building workflow](https://github.com/hamedpa/filepix/actions/workflows/nodejs.yml/badge.svg)
 <center> <img src="./img/cover.png" /></center>
 
 <p class="lead">powerful image converter package, it can convert images into a different formats, it includes below features:</p>
