@@ -31,7 +31,7 @@ exports.sizes = require('./files/sizes.json');
 exports.png2jpeg = async (input, output, options) => {
     let buffer = fs.readFileSync(input);
     pngToJpeg({ quality: options.quality })(buffer)
-        .then(output => fs.writeFileSync(output, output));
+        .then(file => fs.writeFileSync(output, file));
 }
 
 exports.hasModification = async (options) => {
