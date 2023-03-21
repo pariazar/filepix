@@ -47,7 +47,7 @@
     "pdfjs-dist": "^2.14.305",
     "pdfkit": "^0.13.0",
     "png-js": "^1.0.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^4.4.0"
   },
   "keywords": [
     "pdf",
