@@ -44,7 +44,7 @@
     "jimp-watermark": "^1.1.0",
     "jpeg-js": "^0.4.4",
     "node-tesseract-ocr": "^2.2.1",
-    "pdfjs-dist": "^2.14.305",
+    "pdfjs-dist": "^3.7.107",
     "pdfkit": "^0.13.0",
     "png-js": "^1.0.0",
     "rimraf": "^3.0.2"
